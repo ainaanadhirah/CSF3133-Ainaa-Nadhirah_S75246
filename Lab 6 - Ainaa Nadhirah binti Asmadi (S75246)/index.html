@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab 6 Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Web Development Quiz</h1>
+    <p>Answer the questions before the time runs out.</p>
+  </header>
+
+  <main class="quiz-container">
+    <div class="quiz-header">
+      <div id="question-number"></div>
+      <div id="timer">Time: <span id="time-left">15</span>s</div>
+    </div>
+
+    <div id="question-text">Click "Start Quiz" to start the question</div>
+
+    <div id="options-container"></div>
+
+    <div id="feedback"></div>
+
+    <div class="quiz-controls">
+      <button id="start-btn">Start Quiz</button>
+      <button id="next-btn" disabled>Next Question</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Score: <span id="score">0</span> / <span id="total-questions">0</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
