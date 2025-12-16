@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab 7 Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Side Navigation -->
+  <nav class="sidebar">
+    <a href="#hero">Home</a>
+    <a href="#login">Login</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#profile">Profile</a>
+    <a href="#skills">Skills</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <main>
+    <!-- 1. Transparent Image Text (Hero) -->
+    <section id="hero" class="hero">
+      <div class="hero-text">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Front-end learner exploring creative web design.</p>
+      </div>
+    </section>
+
+    <!-- 2. Form on Image -->
+    <section id="login" class="form-section">
+      <div class="form-overlay">
+        <h2>Member Login</h2>
+        <form>
+          <label>Username</label>
+          <input type="text" placeholder="Enter username" required />
+
+          <label>Password</label>
+          <input type="password" placeholder="Enter password" required />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. Automatic Slideshow -->
+    <section id="gallery" class="slideshow-section">
+      <h2>Project Highlights</h2>
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="https://picsum.photos/900/300?1" alt="Slide 1" />
+          <div class="caption">Landing page design</div>
+        </div>
+        <div class="slide fade">
+          <img src="https://picsum.photos/900/300?2" alt="Slide 2" />
+          <div class="caption">Dashboard interface</div>
+        </div>
+        <div class="slide fade">
+          <img src="https://picsum.photos/900/300?3" alt="Slide 3" />
+          <div class="caption">Mobile-first layout</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Profile Card -->
+    <section id="profile" class="profile-section">
+      <h2>About Me</h2>
+      <div class="profile-card">
+        <img src='ainaa.jpg' alt="Profile" />
+        <h3>Ainaa Nadhirah binti Asmadi</h3>
+        <p>Bachelor of Computer Science (Software Engineering) with Honours.</p>
+        <div class="social">
+          <a href="#">Fb</a>
+          <a href="#">Ig</a>
+          <a href="#">Ln</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Progress Bar -->
+    <section id="skills" class="skills-section">
+      <h2>My Skills</h2>
+
+      <div class="skill">
+        <span>HTML</span>
+        <div class="progress">
+          <div class="progress-fill" data-percent="90">90%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>CSS</span>
+        <div class="progress">
+          <div class="progress-fill" data-percent="75">75%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress">
+          <div class="progress-fill" data-percent="60">60%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Collapsible Section -->
+    <section id="faq" class="faq-section">
+      <h2>FAQ</h2>
+
+      <button class="collapsible">What is this page about?</button>
+      <div class="content">
+        <p>This is a Lab 7 homepage combining HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <button class="collapsible">Which technologies are used?</button>
+      <div class="content">
+        <p>HTML for structure, external CSS for styling, and JavaScript for interactivity.</p>
+      </div>
+
+      <button class="collapsible">Can I change the theme?</button>
+      <div class="content">
+        <p>Yes, update images, colors, fonts, and text to match your own idea.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
