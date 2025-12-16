@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  background: #111;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 16px;
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: #575757;
+}
+
+main {
+  margin-left: 180px;
+  width: calc(100% - 180px);
+}
+
+/* 1. Hero with transparent text */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-image: url("https://picsum.photos/1200/600?blur");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 30px 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* 2. Form on image */
+.form-section {
+  position: relative;
+  padding: 60px 20px;
+  background-image: url("https://picsum.photos/1200/500?nature");
+  background-size: cover;
+  background-position: center;
+}
+
+.form-overlay {
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 25px;
+  border-radius: 8px;
+}
+
+.form-overlay h2 {
+  margin-bottom: 15px;
+}
+
+.form-overlay label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.form-overlay input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.form-overlay button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+/* 4. Slideshow */
+.slideshow-section {
+  padding: 40px 20px;
+}
+
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* 5. Profile card */
+.profile-section {
+  padding: 40px 20px;
+}
+
+.profile-card {
+  max-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-card .social a {
+  margin: 0 6px;
+  text-decoration: none;
+  color: #111;
+}
+
+/* 6. Progress bars */
+.skills-section {
+  padding: 40px 20px;
+}
+
+.skill {
+  margin-bottom: 16px;
+}
+
+.progress {
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  color: #fff;
+  text-align: right;
+  padding: 4px 8px;
+  border-radius: 20px;
+  transition: width 1s ease;
+}
+
+/* 7. Collapsible FAQ */
+.faq-section {
+  padding: 40px 20px 60px;
+}
+
+.collapsible {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  background: #f9f9f9;
+  padding: 0 12px;
+  transition: max-height 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 120px;
+  }
+  main {
+    margin-left: 120px;
+    width: calc(100% - 120px);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
